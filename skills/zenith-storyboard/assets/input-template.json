@@ -1,0 +1,16 @@
+{
+  "skill": "zenith-storyboard",
+  "stage_field": "shots",
+  "inputs": [
+    "script[]",
+    "target duration",
+    "visual style"
+  ],
+  "outputs": [
+    "shots[]",
+    "narration anchors",
+    "timeline"
+  ],
+  "upstream": "locked Script scenes",
+  "downstream": "shot concepts and stable IDs"
+}

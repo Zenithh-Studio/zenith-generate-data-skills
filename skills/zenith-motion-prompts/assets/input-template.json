@@ -1,0 +1,15 @@
+{
+  "skill": "zenith-motion-prompts",
+  "stage_field": "motion_prompts",
+  "inputs": [
+    "shots[]",
+    "image_prompts[]"
+  ],
+  "outputs": [
+    "motion_prompts[]",
+    "I2V handoff",
+    "motion filenames"
+  ],
+  "upstream": "Image Prompt and Shot Master",
+  "downstream": "provider-neutral I2V job per shot"
+}

@@ -1,0 +1,15 @@
+{
+  "skill": "zenith-image-prompts",
+  "stage_field": "image_prompts",
+  "inputs": [
+    "shots[]",
+    "visual_bible[]"
+  ],
+  "outputs": [
+    "image_prompts[]",
+    "prompt_json",
+    "image filename contract"
+  ],
+  "upstream": "Shot Master and Visual Bible",
+  "downstream": "one image job per shot"
+}

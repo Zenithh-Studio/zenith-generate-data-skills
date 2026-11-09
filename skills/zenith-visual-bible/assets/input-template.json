@@ -1,0 +1,16 @@
+{
+  "skill": "zenith-visual-bible",
+  "stage_field": "visual_bible",
+  "inputs": [
+    "shots[]",
+    "research[]",
+    "style"
+  ],
+  "outputs": [
+    "visual_bible[]",
+    "master prompt JSON",
+    "reference IDs"
+  ],
+  "upstream": "script and shot inventory",
+  "downstream": "approved master asset specifications"
+}

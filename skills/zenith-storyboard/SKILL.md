@@ -1,4 +1,5 @@
 ---
+version: 1.1.0
 name: zenith-storyboard
 description: Break narration into fully accounted-for timecoded shots, assigning stable IDs, exact script anchors and distinct image concepts.
 ---
@@ -15,3 +16,18 @@ Output: `shots`: `id` (SH-001...), `scene_id`, `start_seconds`, `end_seconds`, `
 7. IDs must be stable and unique, and the image/motion IDs must correspond 1:1.
 8. The shot map is the app scheduler's canonical timeline; Visual Bible authoring may occur after initial breakdown, but must finish before generating Image Prompts.
 After generating the storyboard, run `node scripts/zenith-data.mjs validate <project.json>` and fix all failed gates.
+
+## Local package layout and execution (v1.1)
+
+This skill is independently installable and follows the reference repository's **SKILL.md + references/ + scripts/ + examples/ + assets/ + bilingual README** package convention.
+
+- Read `references/schema.md` for the exact input/output contract before generating any JSON.
+- Read `references/storyboard-pass.md` for the ordered generation pass and acceptance checklist.
+- Read `examples/sample.json` as a coherent miniature **full-package** fixture; do not present its sample research as independently verified.
+- Read `assets/input-template.json` for the stage input names and asset handoff boundary.
+- Run `node scripts/zenith-storyboard.mjs check examples/sample.json` to validate the example.
+- Run `node scripts/zenith-storyboard.mjs render examples/sample.json > stage-report.md` to generate a Markdown review.
+- Run `node scripts/selftest.mjs` for positive and negative stage tests.
+- For generated output, substitute the actual project path in the commands above and **also** run the root `scripts/zenith-data.mjs validate` before export.
+
+Stage CLI validation deliberately checks the **entire seven-tab project** as well as this stage, because upstream/downstream integrity cannot be guaranteed from a fragment. The `render` report is a textual review; it does not generate image/video/audio files. If a stage is incomplete, report the exact broken IDs and do not claim production readiness.

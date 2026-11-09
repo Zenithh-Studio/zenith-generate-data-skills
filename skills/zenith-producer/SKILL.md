@@ -1,4 +1,5 @@
 ---
+version: 1.1.0
 name: zenith-producer
 description: Turn a documentary or faceless YouTube video idea into a source-aware, fully linked seven-tab Zenith production workbook with narration, visual bible, shot image prompts and motion prompts.
 ---
@@ -34,3 +35,18 @@ Score hook and title alignment, audience-fit, narrative causality, retention rhy
 
 ## Safety and honesty
 Distinguish archival evidence from AI reconstruction. Do not forge citations, historical quotes, precise casualty counts, character likeness approvals or licensed image rights. Do not generate or strip third-party watermarks. Voice/audio is produced externally from Script narration. This skill writes **data**, never asserts that video or audio files were generated.
+
+## Local package layout and execution (v1.1)
+
+This skill is independently installable and follows the reference repository's **SKILL.md + references/ + scripts/ + examples/ + assets/ + bilingual README** package convention.
+
+- Read `references/schema.md` for the exact input/output contract before generating any JSON.
+- Read `references/producer-pass.md` for the ordered generation pass and acceptance checklist.
+- Read `examples/sample.json` as a coherent miniature **full-package** fixture; do not present its sample research as independently verified.
+- Read `assets/input-template.json` for the stage input names and asset handoff boundary.
+- Run `node scripts/zenith-producer.mjs check examples/sample.json` to validate the example.
+- Run `node scripts/zenith-producer.mjs render examples/sample.json > stage-report.md` to generate a Markdown review.
+- Run `node scripts/selftest.mjs` for positive and negative stage tests.
+- For generated output, substitute the actual project path in the commands above and **also** run the root `scripts/zenith-data.mjs validate` before export.
+
+Stage CLI validation deliberately checks the **entire seven-tab project** as well as this stage, because upstream/downstream integrity cannot be guaranteed from a fragment. The `render` report is a textual review; it does not generate image/video/audio files. If a stage is incomplete, report the exact broken IDs and do not claim production readiness.

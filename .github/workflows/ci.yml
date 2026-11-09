@@ -15,6 +15,12 @@ jobs:
         run: node scripts/zenith-data.mjs validate examples/napoleon-mini.json
       - name: Run deterministic validation tests
         run: node --test tests/*.test.mjs
+      - name: Test each independently installable sub-skill
+        run: |
+          for skill in skills/zenith-*; do
+            node "$skill/scripts/selftest.mjs"
+            node "$skill/scripts/$(basename "$skill").mjs" check "$skill/examples/sample.json"
+          done
       - name: Export seven-tab workbook
         run: node scripts/zenith-data.mjs export examples/napoleon-mini.json --out dist/demo
       - name: Check export manifest

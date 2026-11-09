@@ -20,12 +20,12 @@ export function check(doc) {
   if(!value || (Array.isArray(value)&&value.length===0))errors.push({code:'STAGE_EMPTY',message:SKILL+' has no '+STAGE+' content'});
   return {skill:SKILL,stage:STAGE,ok:errors.length===0,count,errors,warnings:result.warnings,stats:result.stats};
 }
-const esc = x => String(x??'').replaceAll('|','\\|').replaceAll('\\n',' ');
+const esc = x => String(x??'').replaceAll('|','\\|').replaceAll('\n',' ');
 export function render(doc) {
   const r=check(doc);
   const value=doc?.[STAGE];
   const rows=Array.isArray(value)?value.map((x,i)=>[i+1,x?.id??'',x?.title??x?.name??x?.section??x?.visual_concept??x?.motion_method??'']):Object.entries(value??{}).map(([k,v],i)=>[i+1,k,typeof v==='object'?JSON.stringify(v):v]);
-  return ['# '+SKILL+' stage review','','**Status:** '+(r.ok?'PASS':'BLOCKED'),'**Records:** '+r.count,'','| # | ID / Field | Description |','|---:|---|---|',...rows.map(x=>'| '+x.map(esc).join(' | ')+' |'),'','## Validation findings',...(r.errors.length?r.errors.map(x=>'- ERROR '+x.code+': '+x.message):['- No structural errors.']),...(r.warnings.map(x=>'- WARN '+x.code+': '+x.message)),'','Editorial quality and source rights require human review.'].join('\\n')+'\\n';
+  return ['# '+SKILL+' stage review','','**Status:** '+(r.ok?'PASS':'BLOCKED'),'**Records:** '+r.count,'','| # | ID / Field | Description |','|---:|---|---|',...rows.map(x=>'| '+x.map(esc).join(' | ')+' |'),'','## Validation findings',...(r.errors.length?r.errors.map(x=>'- ERROR '+x.code+': '+x.message):['- No structural errors.']),...(r.warnings.map(x=>'- WARN '+x.code+': '+x.message)),'','Editorial quality and source rights require human review.'].join('\n')+'\n';
 }
 function main(args){
   const [cmd,file]=args;

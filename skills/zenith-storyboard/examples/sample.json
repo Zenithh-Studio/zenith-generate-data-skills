@@ -1,0 +1,384 @@
+{
+  "schema_version": "1.0",
+  "overview": {
+    "project_id": "PILOT-DEMO",
+    "channel": "The People Behind History's Greatest Turning Points",
+    "series": "Fatal Decision",
+    "youtube_title": "Napoleon's Fatal Gamble: Why He Invaded Russia in 1812",
+    "youtube_description": "Why did Napoleon march into Russia? An archival-inspired paper-cut documentary exploring the decision and its tragic consequences. Illustrations are artistic reconstructions, not authentic archival footage.",
+    "central_question": "Why did Napoleon expect Russia to negotiate?",
+    "historical_thesis": "The 1812 invasion seriously weakened Napoleon's forces; the collapse of the empire followed further campaigns in 1813–1814.",
+    "audience": "Global English history viewers",
+    "duration_seconds": 20,
+    "shot_count": 3,
+    "visual_style": "Paper-cut Animation + Archival Documentary"
+  },
+  "research": [
+    {
+      "type": "CLAIM",
+      "id": "CL-001",
+      "title": "Napoleon invaded Russia in June 1812; later retreat losses had multiple causes",
+      "source_url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/napoleons-russian-campaign-the-march-to-the-niemen/",
+      "coverage": "1812 campaign overview",
+      "verification": "REVIEW_REQUIRED",
+      "caveat": "Example source lead; review claim wording and primary source before publication",
+      "next_action": "Verify passage against source"
+    },
+    {
+      "type": "SOURCE",
+      "id": "SRC-001",
+      "title": "Fondation Napoléon campaign reference",
+      "source_url": "https://www.napoleon.org/en/",
+      "coverage": "Historical art direction",
+      "verification": "SOURCE_LEAD",
+      "caveat": "Illustration rights not granted",
+      "next_action": "Research license"
+    }
+  ],
+  "script": [
+    {
+      "id": "SC-001",
+      "section": "Cold open",
+      "narrative_question": "Why did Napoleon invade Russia?",
+      "narration": "In 1812 Napoleon marched into Russia with a vast army. Months later his army was shattered. But the disaster was not caused by winter alone.",
+      "words": 25,
+      "start_seconds": 0,
+      "end_seconds": 20,
+      "research_claim_ids": [
+        "CL-001"
+      ]
+    }
+  ],
+  "visual_bible": [
+    {
+      "id": "NAPOLEON",
+      "type": "CHARACTER",
+      "name": "Napoleon Bonaparte",
+      "reference_requirement": "Historically grounded 1812 portrait study",
+      "appearance": "1812 French imperial uniform, same face and age across shots",
+      "consistency": "Lock face, silhouette, uniform and period",
+      "source_reference": "SRC-001",
+      "approval": "REFERENCE_PENDING",
+      "prompt_json": {
+        "subject": "Napoleon Bonaparte",
+        "style": "engraved paper cut documentary",
+        "filename": "NAPOLEON.png"
+      }
+    },
+    {
+      "id": "EUROPE_MAP",
+      "type": "ENVIRONMENT",
+      "name": "Europe and Russian campaign map",
+      "reference_requirement": "Historical 1812 map",
+      "appearance": "Accurate geography, no auto-generated labels",
+      "consistency": "Locked geographic features",
+      "source_reference": "SRC-001",
+      "approval": "REFERENCE_PENDING",
+      "prompt_json": {
+        "location": "Europe in 1812",
+        "style": "engraved paper cut documentary",
+        "filename": "EUROPE_MAP.png"
+      }
+    },
+    {
+      "id": "SNOW_ROAD",
+      "type": "ENVIRONMENT",
+      "name": "Retreat road, late 1812",
+      "reference_requirement": "Period transport and weather reference",
+      "appearance": "Retreating troops, exhausted wagons, snow in late autumn/winter",
+      "consistency": "Period costume, no modern objects",
+      "source_reference": "SRC-001",
+      "approval": "REFERENCE_PENDING",
+      "prompt_json": {
+        "location": "Russia, retreat of 1812",
+        "style": "engraved paper cut documentary",
+        "filename": "SNOW_ROAD.png"
+      }
+    }
+  ],
+  "shots": [
+    {
+      "id": "SH-001",
+      "scene_id": "SC-001",
+      "start_seconds": 0,
+      "end_seconds": 7,
+      "duration_seconds": 7,
+      "narration_anchor": "In 1812 Napoleon marched into Russia with a vast army.",
+      "visual_concept": "Napoleon in front of map of Europe and marching columns",
+      "image_prompt_id": "IMG-001",
+      "animation_id": "ANM-001",
+      "fact_source_ids": [
+        "CL-001"
+      ]
+    },
+    {
+      "id": "SH-002",
+      "scene_id": "SC-001",
+      "start_seconds": 7,
+      "end_seconds": 12,
+      "duration_seconds": 5,
+      "narration_anchor": "Months later his army was shattered.",
+      "visual_concept": "Exhausted retreating soldiers on a broken road",
+      "image_prompt_id": "IMG-002",
+      "animation_id": "ANM-002",
+      "fact_source_ids": [
+        "CL-001"
+      ]
+    },
+    {
+      "id": "SH-003",
+      "scene_id": "SC-001",
+      "start_seconds": 12,
+      "end_seconds": 20,
+      "duration_seconds": 8,
+      "narration_anchor": "But the disaster was not caused by winter alone.",
+      "visual_concept": "Two-season contrast: summer logistic strain, later snow",
+      "image_prompt_id": "IMG-003",
+      "animation_id": "ANM-003",
+      "fact_source_ids": [
+        "CL-001"
+      ]
+    }
+  ],
+  "image_prompts": [
+    {
+      "id": "IMG-001",
+      "shot_id": "SH-001",
+      "scene_id": "SC-001",
+      "references": {
+        "characters": [
+          "NAPOLEON"
+        ],
+        "environments": [
+          "EUROPE_MAP"
+        ],
+        "props": []
+      },
+      "historical_sources": [
+        "CL-001"
+      ],
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-001",
+        "scene_id": "SC-001",
+        "prompt_id": "IMG-001",
+        "narration_anchor": "In 1812 Napoleon marched into Russia with a vast army.",
+        "visual_concept": "Napoleon in front of map of Europe and marching columns",
+        "references": {
+          "characters": [
+            "NAPOLEON"
+          ],
+          "environments": [
+            "EUROPE_MAP"
+          ],
+          "props": []
+        },
+        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Napoleon in front of map of Europe and marching columns. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text.",
+        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo",
+        "framing": "wide readable focal point",
+        "lighting": "period natural light",
+        "layer_plan": "separate foreground, subject, background",
+        "output": {
+          "aspect_ratio": "16:9",
+          "resolution": "1920x1080",
+          "text_in_image": false
+        },
+        "filename": "IMG-001.png"
+      }
+    },
+    {
+      "id": "IMG-002",
+      "shot_id": "SH-002",
+      "scene_id": "SC-001",
+      "references": {
+        "characters": [],
+        "environments": [
+          "SNOW_ROAD"
+        ],
+        "props": []
+      },
+      "historical_sources": [
+        "CL-001"
+      ],
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-002",
+        "scene_id": "SC-001",
+        "prompt_id": "IMG-002",
+        "narration_anchor": "Months later his army was shattered.",
+        "visual_concept": "Exhausted retreating soldiers on a broken road",
+        "references": {
+          "characters": [],
+          "environments": [
+            "SNOW_ROAD"
+          ],
+          "props": []
+        },
+        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Exhausted retreating soldiers on a broken road. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text.",
+        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo",
+        "framing": "wide readable focal point",
+        "lighting": "period natural light",
+        "layer_plan": "separate foreground, subject, background",
+        "output": {
+          "aspect_ratio": "16:9",
+          "resolution": "1920x1080",
+          "text_in_image": false
+        },
+        "filename": "IMG-002.png"
+      }
+    },
+    {
+      "id": "IMG-003",
+      "shot_id": "SH-003",
+      "scene_id": "SC-001",
+      "references": {
+        "characters": [],
+        "environments": [
+          "EUROPE_MAP"
+        ],
+        "props": []
+      },
+      "historical_sources": [
+        "CL-001"
+      ],
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-003",
+        "scene_id": "SC-001",
+        "prompt_id": "IMG-003",
+        "narration_anchor": "But the disaster was not caused by winter alone.",
+        "visual_concept": "Two-season contrast: summer logistic strain, later snow",
+        "references": {
+          "characters": [],
+          "environments": [
+            "EUROPE_MAP"
+          ],
+          "props": []
+        },
+        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Two-season contrast: summer logistic strain, later snow. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text.",
+        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo",
+        "framing": "wide readable focal point",
+        "lighting": "period natural light",
+        "layer_plan": "separate foreground, subject, background",
+        "output": {
+          "aspect_ratio": "16:9",
+          "resolution": "1920x1080",
+          "text_in_image": false
+        },
+        "filename": "IMG-003.png"
+      }
+    }
+  ],
+  "motion_prompts": [
+    {
+      "id": "ANM-001",
+      "shot_id": "SH-001",
+      "motion_method": "PAPER_CUT_PARALLAX",
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-001",
+        "scene_id": "SC-001",
+        "animation_id": "ANM-001",
+        "image_prompt_id": "IMG-001",
+        "narration_anchor": "In 1812 Napoleon marched into Russia with a vast army.",
+        "references": {
+          "characters": [
+            "NAPOLEON"
+          ],
+          "environments": [
+            "EUROPE_MAP"
+          ],
+          "props": []
+        },
+        "image_input": {
+          "source": "generated_image",
+          "image_prompt_id": "IMG-001"
+        },
+        "motion_method": "PAPER_CUT_PARALLAX",
+        "prompt": "Animate only the approved image for 7 seconds; Napoleon in front of map of Europe and marching columns. Gentle plane motion, no face morphing or text.",
+        "camera": "subtle 2 percent parallax push",
+        "duration_seconds": 7,
+        "layer_actions": "subtle 2.5D depth movement",
+        "transition": "editorial cut",
+        "negative_constraints": [
+          "flicker",
+          "warped anatomy",
+          "invented text"
+        ],
+        "filename": "ANM-001.mp4"
+      }
+    },
+    {
+      "id": "ANM-002",
+      "shot_id": "SH-002",
+      "motion_method": "PAPER_CUT_PARALLAX",
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-002",
+        "scene_id": "SC-001",
+        "animation_id": "ANM-002",
+        "image_prompt_id": "IMG-002",
+        "narration_anchor": "Months later his army was shattered.",
+        "references": {
+          "characters": [],
+          "environments": [
+            "SNOW_ROAD"
+          ],
+          "props": []
+        },
+        "image_input": {
+          "source": "generated_image",
+          "image_prompt_id": "IMG-002"
+        },
+        "motion_method": "PAPER_CUT_PARALLAX",
+        "prompt": "Animate only the approved image for 5 seconds; Exhausted retreating soldiers on a broken road. Gentle plane motion, no face morphing or text.",
+        "camera": "subtle 2 percent parallax push",
+        "duration_seconds": 5,
+        "layer_actions": "subtle 2.5D depth movement",
+        "transition": "editorial cut",
+        "negative_constraints": [
+          "flicker",
+          "warped anatomy",
+          "invented text"
+        ],
+        "filename": "ANM-002.mp4"
+      }
+    },
+    {
+      "id": "ANM-003",
+      "shot_id": "SH-003",
+      "motion_method": "PAPER_CUT_PARALLAX",
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-003",
+        "scene_id": "SC-001",
+        "animation_id": "ANM-003",
+        "image_prompt_id": "IMG-003",
+        "narration_anchor": "But the disaster was not caused by winter alone.",
+        "references": {
+          "characters": [],
+          "environments": [
+            "EUROPE_MAP"
+          ],
+          "props": []
+        },
+        "image_input": {
+          "source": "generated_image",
+          "image_prompt_id": "IMG-003"
+        },
+        "motion_method": "PAPER_CUT_PARALLAX",
+        "prompt": "Animate only the approved image for 8 seconds; Two-season contrast: summer logistic strain, later snow. Gentle plane motion, no face morphing or text.",
+        "camera": "subtle 2 percent parallax push",
+        "duration_seconds": 8,
+        "layer_actions": "subtle 2.5D depth movement",
+        "transition": "editorial cut",
+        "negative_constraints": [
+          "flicker",
+          "warped anatomy",
+          "invented text"
+        ],
+        "filename": "ANM-003.mp4"
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "skill": "zenith-storyboard",
+  "schema_version": "1.0",
+  "field": "shots",
+  "records": [
+    {
+      "id": "SH-001",
+      "scene_id": "SC-001",
+      "start_seconds": 0,
+      "end_seconds": 7,
+      "duration_seconds": 7,
+      "narration_anchor": "In 1812 Napoleon marched into Russia with a vast army.",
+      "visual_concept": "Napoleon in front of map of Europe and marching columns",
+      "image_prompt_id": "IMG-001",
+      "animation_id": "ANM-001",
+      "fact_source_ids": [
+        "CL-001"
+      ]
+    },
+    {
+      "id": "SH-002",
+      "scene_id": "SC-001",
+      "start_seconds": 7,
+      "end_seconds": 12,
+      "duration_seconds": 5,
+      "narration_anchor": "Months later his army was shattered.",
+      "visual_concept": "Exhausted retreating soldiers on a broken road",
+      "image_prompt_id": "IMG-002",
+      "animation_id": "ANM-002",
+      "fact_source_ids": [
+        "CL-001"
+      ]
+    },
+    {
+      "id": "SH-003",
+      "scene_id": "SC-001",
+      "start_seconds": 12,
+      "end_seconds": 20,
+      "duration_seconds": 8,
+      "narration_anchor": "But the disaster was not caused by winter alone.",
+      "visual_concept": "Two-season contrast: summer logistic strain, later snow",
+      "image_prompt_id": "IMG-003",
+      "animation_id": "ANM-003",
+      "fact_source_ids": [
+        "CL-001"
+      ]
+    }
+  ]
+}

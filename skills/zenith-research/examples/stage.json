@@ -1,0 +1,27 @@
+{
+  "skill": "zenith-research",
+  "schema_version": "1.0",
+  "field": "research",
+  "records": [
+    {
+      "type": "CLAIM",
+      "id": "CL-001",
+      "title": "Napoleon invaded Russia in June 1812; later retreat losses had multiple causes",
+      "source_url": "https://www.napoleon.org/en/history-of-the-two-empires/timelines/napoleons-russian-campaign-the-march-to-the-niemen/",
+      "coverage": "1812 campaign overview",
+      "verification": "REVIEW_REQUIRED",
+      "caveat": "Example source lead; review claim wording and primary source before publication",
+      "next_action": "Verify passage against source"
+    },
+    {
+      "type": "SOURCE",
+      "id": "SRC-001",
+      "title": "Fondation Napoléon campaign reference",
+      "source_url": "https://www.napoleon.org/en/",
+      "coverage": "Historical art direction",
+      "verification": "SOURCE_LEAD",
+      "caveat": "Illustration rights not granted",
+      "next_action": "Research license"
+    }
+  ]
+}

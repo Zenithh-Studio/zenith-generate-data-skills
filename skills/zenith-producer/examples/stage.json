@@ -1,0 +1,18 @@
+{
+  "skill": "zenith-producer",
+  "schema_version": "1.0",
+  "field": "overview",
+  "records": {
+    "project_id": "PILOT-DEMO",
+    "channel": "The People Behind History's Greatest Turning Points",
+    "series": "Fatal Decision",
+    "youtube_title": "Napoleon's Fatal Gamble: Why He Invaded Russia in 1812",
+    "youtube_description": "Why did Napoleon march into Russia? An archival-inspired paper-cut documentary exploring the decision and its tragic consequences. Illustrations are artistic reconstructions, not authentic archival footage.",
+    "central_question": "Why did Napoleon expect Russia to negotiate?",
+    "historical_thesis": "The 1812 invasion seriously weakened Napoleon's forces; the collapse of the empire followed further campaigns in 1813–1814.",
+    "audience": "Global English history viewers",
+    "duration_seconds": 20,
+    "shot_count": 3,
+    "visual_style": "Paper-cut Animation + Archival Documentary"
+  }
+}

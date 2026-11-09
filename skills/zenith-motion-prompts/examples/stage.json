@@ -1,0 +1,117 @@
+{
+  "skill": "zenith-motion-prompts",
+  "schema_version": "1.0",
+  "field": "motion_prompts",
+  "records": [
+    {
+      "id": "ANM-001",
+      "shot_id": "SH-001",
+      "motion_method": "PAPER_CUT_PARALLAX",
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-001",
+        "scene_id": "SC-001",
+        "animation_id": "ANM-001",
+        "image_prompt_id": "IMG-001",
+        "narration_anchor": "In 1812 Napoleon marched into Russia with a vast army.",
+        "references": {
+          "characters": [
+            "NAPOLEON"
+          ],
+          "environments": [
+            "EUROPE_MAP"
+          ],
+          "props": []
+        },
+        "image_input": {
+          "source": "generated_image",
+          "image_prompt_id": "IMG-001"
+        },
+        "motion_method": "PAPER_CUT_PARALLAX",
+        "prompt": "Animate only the approved image for 7 seconds; Napoleon in front of map of Europe and marching columns. Gentle plane motion, no face morphing or text.",
+        "camera": "subtle 2 percent parallax push",
+        "duration_seconds": 7,
+        "layer_actions": "subtle 2.5D depth movement",
+        "transition": "editorial cut",
+        "negative_constraints": [
+          "flicker",
+          "warped anatomy",
+          "invented text"
+        ],
+        "filename": "ANM-001.mp4"
+      }
+    },
+    {
+      "id": "ANM-002",
+      "shot_id": "SH-002",
+      "motion_method": "PAPER_CUT_PARALLAX",
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-002",
+        "scene_id": "SC-001",
+        "animation_id": "ANM-002",
+        "image_prompt_id": "IMG-002",
+        "narration_anchor": "Months later his army was shattered.",
+        "references": {
+          "characters": [],
+          "environments": [
+            "SNOW_ROAD"
+          ],
+          "props": []
+        },
+        "image_input": {
+          "source": "generated_image",
+          "image_prompt_id": "IMG-002"
+        },
+        "motion_method": "PAPER_CUT_PARALLAX",
+        "prompt": "Animate only the approved image for 5 seconds; Exhausted retreating soldiers on a broken road. Gentle plane motion, no face morphing or text.",
+        "camera": "subtle 2 percent parallax push",
+        "duration_seconds": 5,
+        "layer_actions": "subtle 2.5D depth movement",
+        "transition": "editorial cut",
+        "negative_constraints": [
+          "flicker",
+          "warped anatomy",
+          "invented text"
+        ],
+        "filename": "ANM-002.mp4"
+      }
+    },
+    {
+      "id": "ANM-003",
+      "shot_id": "SH-003",
+      "motion_method": "PAPER_CUT_PARALLAX",
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-003",
+        "scene_id": "SC-001",
+        "animation_id": "ANM-003",
+        "image_prompt_id": "IMG-003",
+        "narration_anchor": "But the disaster was not caused by winter alone.",
+        "references": {
+          "characters": [],
+          "environments": [
+            "EUROPE_MAP"
+          ],
+          "props": []
+        },
+        "image_input": {
+          "source": "generated_image",
+          "image_prompt_id": "IMG-003"
+        },
+        "motion_method": "PAPER_CUT_PARALLAX",
+        "prompt": "Animate only the approved image for 8 seconds; Two-season contrast: summer logistic strain, later snow. Gentle plane motion, no face morphing or text.",
+        "camera": "subtle 2 percent parallax push",
+        "duration_seconds": 8,
+        "layer_actions": "subtle 2.5D depth movement",
+        "transition": "editorial cut",
+        "negative_constraints": [
+          "flicker",
+          "warped anatomy",
+          "invented text"
+        ],
+        "filename": "ANM-003.mp4"
+      }
+    }
+  ]
+}

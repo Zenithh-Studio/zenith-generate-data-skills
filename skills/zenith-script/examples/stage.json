@@ -1,0 +1,19 @@
+{
+  "skill": "zenith-script",
+  "schema_version": "1.0",
+  "field": "script",
+  "records": [
+    {
+      "id": "SC-001",
+      "section": "Cold open",
+      "narrative_question": "Why did Napoleon invade Russia?",
+      "narration": "In 1812 Napoleon marched into Russia with a vast army. Months later his army was shattered. But the disaster was not caused by winter alone.",
+      "words": 25,
+      "start_seconds": 0,
+      "end_seconds": 20,
+      "research_claim_ids": [
+        "CL-001"
+      ]
+    }
+  ]
+}

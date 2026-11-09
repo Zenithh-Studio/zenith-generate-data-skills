@@ -1,0 +1,134 @@
+{
+  "skill": "zenith-image-prompts",
+  "schema_version": "1.0",
+  "field": "image_prompts",
+  "records": [
+    {
+      "id": "IMG-001",
+      "shot_id": "SH-001",
+      "scene_id": "SC-001",
+      "references": {
+        "characters": [
+          "NAPOLEON"
+        ],
+        "environments": [
+          "EUROPE_MAP"
+        ],
+        "props": []
+      },
+      "historical_sources": [
+        "CL-001"
+      ],
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-001",
+        "scene_id": "SC-001",
+        "prompt_id": "IMG-001",
+        "narration_anchor": "In 1812 Napoleon marched into Russia with a vast army.",
+        "visual_concept": "Napoleon in front of map of Europe and marching columns",
+        "references": {
+          "characters": [
+            "NAPOLEON"
+          ],
+          "environments": [
+            "EUROPE_MAP"
+          ],
+          "props": []
+        },
+        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Napoleon in front of map of Europe and marching columns. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text.",
+        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo",
+        "framing": "wide readable focal point",
+        "lighting": "period natural light",
+        "layer_plan": "separate foreground, subject, background",
+        "output": {
+          "aspect_ratio": "16:9",
+          "resolution": "1920x1080",
+          "text_in_image": false
+        },
+        "filename": "IMG-001.png"
+      }
+    },
+    {
+      "id": "IMG-002",
+      "shot_id": "SH-002",
+      "scene_id": "SC-001",
+      "references": {
+        "characters": [],
+        "environments": [
+          "SNOW_ROAD"
+        ],
+        "props": []
+      },
+      "historical_sources": [
+        "CL-001"
+      ],
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-002",
+        "scene_id": "SC-001",
+        "prompt_id": "IMG-002",
+        "narration_anchor": "Months later his army was shattered.",
+        "visual_concept": "Exhausted retreating soldiers on a broken road",
+        "references": {
+          "characters": [],
+          "environments": [
+            "SNOW_ROAD"
+          ],
+          "props": []
+        },
+        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Exhausted retreating soldiers on a broken road. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text.",
+        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo",
+        "framing": "wide readable focal point",
+        "lighting": "period natural light",
+        "layer_plan": "separate foreground, subject, background",
+        "output": {
+          "aspect_ratio": "16:9",
+          "resolution": "1920x1080",
+          "text_in_image": false
+        },
+        "filename": "IMG-002.png"
+      }
+    },
+    {
+      "id": "IMG-003",
+      "shot_id": "SH-003",
+      "scene_id": "SC-001",
+      "references": {
+        "characters": [],
+        "environments": [
+          "EUROPE_MAP"
+        ],
+        "props": []
+      },
+      "historical_sources": [
+        "CL-001"
+      ],
+      "prompt_json": {
+        "schema_version": "1.0",
+        "shot_id": "SH-003",
+        "scene_id": "SC-001",
+        "prompt_id": "IMG-003",
+        "narration_anchor": "But the disaster was not caused by winter alone.",
+        "visual_concept": "Two-season contrast: summer logistic strain, later snow",
+        "references": {
+          "characters": [],
+          "environments": [
+            "EUROPE_MAP"
+          ],
+          "props": []
+        },
+        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Two-season contrast: summer logistic strain, later snow. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text.",
+        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo",
+        "framing": "wide readable focal point",
+        "lighting": "period natural light",
+        "layer_plan": "separate foreground, subject, background",
+        "output": {
+          "aspect_ratio": "16:9",
+          "resolution": "1920x1080",
+          "text_in_image": false
+        },
+        "filename": "IMG-003.png"
+      }
+    }
+  ]
+}

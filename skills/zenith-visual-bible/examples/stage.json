@@ -1,0 +1,52 @@
+{
+  "skill": "zenith-visual-bible",
+  "schema_version": "1.0",
+  "field": "visual_bible",
+  "records": [
+    {
+      "id": "NAPOLEON",
+      "type": "CHARACTER",
+      "name": "Napoleon Bonaparte",
+      "reference_requirement": "Historically grounded 1812 portrait study",
+      "appearance": "1812 French imperial uniform, same face and age across shots",
+      "consistency": "Lock face, silhouette, uniform and period",
+      "source_reference": "SRC-001",
+      "approval": "REFERENCE_PENDING",
+      "prompt_json": {
+        "subject": "Napoleon Bonaparte",
+        "style": "engraved paper cut documentary",
+        "filename": "NAPOLEON.png"
+      }
+    },
+    {
+      "id": "EUROPE_MAP",
+      "type": "ENVIRONMENT",
+      "name": "Europe and Russian campaign map",
+      "reference_requirement": "Historical 1812 map",
+      "appearance": "Accurate geography, no auto-generated labels",
+      "consistency": "Locked geographic features",
+      "source_reference": "SRC-001",
+      "approval": "REFERENCE_PENDING",
+      "prompt_json": {
+        "location": "Europe in 1812",
+        "style": "engraved paper cut documentary",
+        "filename": "EUROPE_MAP.png"
+      }
+    },
+    {
+      "id": "SNOW_ROAD",
+      "type": "ENVIRONMENT",
+      "name": "Retreat road, late 1812",
+      "reference_requirement": "Period transport and weather reference",
+      "appearance": "Retreating troops, exhausted wagons, snow in late autumn/winter",
+      "consistency": "Period costume, no modern objects",
+      "source_reference": "SRC-001",
+      "approval": "REFERENCE_PENDING",
+      "prompt_json": {
+        "location": "Russia, retreat of 1812",
+        "style": "engraved paper cut documentary",
+        "filename": "SNOW_ROAD.png"
+      }
+    }
+  ]
+}

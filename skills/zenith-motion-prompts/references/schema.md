@@ -28,3 +28,7 @@ Run `node scripts/zenith-motion-prompts.mjs check examples/sample.json` from thi
 
 ## Error handling
 On missing data or invalid references, report the exact failing ID; never invent placeholder content to force a pass.
+
+## Motion JSON extensions
+
+Required `prompt_json.sound_design`: `{"type":"diegetic_ambience_and_foley","prompt":"Wind and soft wagon creaks only if visible; no speech.","voice":false,"dialogue":false,"music":false,"generate_audio":true,"allow_silence_if_not_applicable":true}`. Never include `narration_anchor` in motion JSON. The shot narration stays upstream. Preserve the 1:1 image link and duration.

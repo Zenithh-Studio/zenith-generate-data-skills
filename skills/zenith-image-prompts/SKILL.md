@@ -37,3 +37,9 @@ This skill is independently installable. Its English-only package includes **SKI
 - For generated output, substitute the actual project path in the commands above and **also** run the root `scripts/zenith-data.mjs validate` before export.
 
 Stage CLI validation deliberately checks the **entire seven-tab project** as well as this stage, because upstream/downstream integrity cannot be guaranteed from a fragment. The `render` report is a textual review; it does not generate image/video/audio files. If a stage is incomplete, report the exact broken IDs and do not claim production readiness.
+
+## Mandatory reference style
+
+STYLE CONTRACT: use full-bleed edge-to-edge historical paper-cut/archival engraving. Torn paper edges occur ONLY between interior sky/terrain planes, never as an outer border. Characters are etched and integrated into the scene, not white-outline stickers. No surrounding parchment margin, poster, frame or atlas page. For map shots use subtle integrated geographic relief unless an actual map close-up is explicitly requested. Preserve the documented season and 16:9 composition. style_key=PAPER_CUT_ARCHIVAL_ENGRAVING_V3_EDGE_TO_EDGE.
+
+Explicitly reject decorative ripped-paper frames, white-outline sticker characters and large atlas-map backdrops that overpower the shot. Set `output.full_bleed=true`, `output.no_border=true`, and `style_key` to the agreed style key. Narration anchor remains metadata only, never printed in the image.

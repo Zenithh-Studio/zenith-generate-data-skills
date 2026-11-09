@@ -106,7 +106,9 @@ export function validatePackage(pkg) {
     if(j.animation_id!==motion.id||j.shot_id!==shot.id||j.scene_id!==shot.scene_id)err('MOTION_JSON_IDS',motion.id+' JSON IDs mismatch');
     if(j.image_prompt_id!==shot.image_prompt_id)err('MOTION_IMAGE',motion.id+' references wrong image');
     if(j.image_input?.source!=='generated_image'||j.image_input.image_prompt_id!==shot.image_prompt_id)err('IMAGE_HANDOFF',motion.id+' invalid image input contract');
-    if(compact(j.narration_anchor)!==compact(shot.narration_anchor))err('MOTION_ANCHOR',motion.id+' narration differs');
+    if('narration_anchor' in j || 'voice' in j || 'voice_over' in j || 'voiceover' in j)err('MOTION_VOICE',motion.id+' must not contain narration or voice fields');
+    if(!isObject(j.sound_design)||j.sound_design.type!=='diegetic_ambience_and_foley'||!nonempty(j.sound_design.prompt)||j.sound_design.voice!==false||j.sound_design.dialogue!==false||j.sound_design.music!==false||typeof j.sound_design.generate_audio!=='boolean')err('MOTION_SOUND',motion.id+' requires non-verbal diegetic sound design');
+    if(/narration is context|voice.?over script|spoken narration/i.test(j.prompt||''))err('MOTION_VOICE',motion.id+' motion prompt must not include narration text');
     if(!durationEq(j.duration_seconds,shot.duration_seconds))err('MOTION_DURATION',motion.id+' duration differs from Shot Master');
     if(!nonempty(j.prompt)||!nonempty(j.camera)||!nonempty(j.motion_method))err('MOTION_TEXT',motion.id+' missing motion instructions');
     if(imageMap.has(shot.image_prompt_id)&&!equal(j.references,imageMap.get(shot.image_prompt_id).references))err('MOTION_REFERENCES',motion.id+' references differ from Image Prompt');

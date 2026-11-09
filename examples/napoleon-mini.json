@@ -11,7 +11,7 @@
     "audience": "Global English history viewers",
     "duration_seconds": 20,
     "shot_count": 3,
-    "visual_style": "Paper-cut Animation + Archival Documentary"
+    "visual_style": "Full-bleed paper-cut / archival engraving (no border or sticker outlines)"
   },
   "research": [
     {
@@ -61,8 +61,9 @@
       "approval": "REFERENCE_PENDING",
       "prompt_json": {
         "subject": "Napoleon Bonaparte",
-        "style": "engraved paper cut documentary",
-        "filename": "NAPOLEON.png"
+        "style": "Full-bleed interior torn-paper relief, archival crosshatching, no outer border or sticker outlines.",
+        "filename": "NAPOLEON.png",
+        "style_key": "PAPER_CUT_ARCHIVAL_ENGRAVING_V3_EDGE_TO_EDGE"
       }
     },
     {
@@ -76,8 +77,9 @@
       "approval": "REFERENCE_PENDING",
       "prompt_json": {
         "location": "Europe in 1812",
-        "style": "engraved paper cut documentary",
-        "filename": "EUROPE_MAP.png"
+        "style": "Full-bleed interior torn-paper relief, archival crosshatching, no outer border or sticker outlines.",
+        "filename": "EUROPE_MAP.png",
+        "style_key": "PAPER_CUT_ARCHIVAL_ENGRAVING_V3_EDGE_TO_EDGE"
       }
     },
     {
@@ -91,8 +93,9 @@
       "approval": "REFERENCE_PENDING",
       "prompt_json": {
         "location": "Russia, retreat of 1812",
-        "style": "engraved paper cut documentary",
-        "filename": "SNOW_ROAD.png"
+        "style": "Full-bleed interior torn-paper relief, archival crosshatching, no outer border or sticker outlines.",
+        "filename": "SNOW_ROAD.png",
+        "style_key": "PAPER_CUT_ARCHIVAL_ENGRAVING_V3_EDGE_TO_EDGE"
       }
     }
   ],
@@ -173,17 +176,20 @@
           ],
           "props": []
         },
-        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Napoleon in front of map of Europe and marching columns. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text.",
-        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo",
+        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Napoleon in front of map of Europe and marching columns. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text. Full-bleed scene fills all edges; interior torn-paper layers only, no surrounding frame, no white sticker outlines, no pasted atlas.",
+        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo, outer border, ripped perimeter, white sticker outlines, atlas poster",
         "framing": "wide readable focal point",
         "lighting": "period natural light",
         "layer_plan": "separate foreground, subject, background",
         "output": {
           "aspect_ratio": "16:9",
           "resolution": "1920x1080",
-          "text_in_image": false
+          "text_in_image": false,
+          "full_bleed": true,
+          "no_border": true
         },
-        "filename": "IMG-001.png"
+        "filename": "IMG-001.png",
+        "style_key": "PAPER_CUT_ARCHIVAL_ENGRAVING_V3_EDGE_TO_EDGE"
       }
     },
     {
@@ -214,17 +220,20 @@
           ],
           "props": []
         },
-        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Exhausted retreating soldiers on a broken road. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text.",
-        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo",
+        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Exhausted retreating soldiers on a broken road. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text. Full-bleed scene fills all edges; interior torn-paper layers only, no surrounding frame, no white sticker outlines, no pasted atlas.",
+        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo, outer border, ripped perimeter, white sticker outlines, atlas poster",
         "framing": "wide readable focal point",
         "lighting": "period natural light",
         "layer_plan": "separate foreground, subject, background",
         "output": {
           "aspect_ratio": "16:9",
           "resolution": "1920x1080",
-          "text_in_image": false
+          "text_in_image": false,
+          "full_bleed": true,
+          "no_border": true
         },
-        "filename": "IMG-002.png"
+        "filename": "IMG-002.png",
+        "style_key": "PAPER_CUT_ARCHIVAL_ENGRAVING_V3_EDGE_TO_EDGE"
       }
     },
     {
@@ -255,17 +264,20 @@
           ],
           "props": []
         },
-        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Two-season contrast: summer logistic strain, later snow. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text.",
-        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo",
+        "prompt": "Original 16:9 Napoleonic history paper-cut illustration. Two-season contrast: summer logistic strain, later snow. Engraved archival-inspired layered paper style, historically plausible costume and setting, no baked-in text. Full-bleed scene fills all edges; interior torn-paper layers only, no surrounding frame, no white sticker outlines, no pasted atlas.",
+        "negative_prompt": "modern dress, invented medals, invented labels, watermark, fake archival photo, outer border, ripped perimeter, white sticker outlines, atlas poster",
         "framing": "wide readable focal point",
         "lighting": "period natural light",
         "layer_plan": "separate foreground, subject, background",
         "output": {
           "aspect_ratio": "16:9",
           "resolution": "1920x1080",
-          "text_in_image": false
+          "text_in_image": false,
+          "full_bleed": true,
+          "no_border": true
         },
-        "filename": "IMG-003.png"
+        "filename": "IMG-003.png",
+        "style_key": "PAPER_CUT_ARCHIVAL_ENGRAVING_V3_EDGE_TO_EDGE"
       }
     }
   ],
@@ -280,7 +292,6 @@
         "scene_id": "SC-001",
         "animation_id": "ANM-001",
         "image_prompt_id": "IMG-001",
-        "narration_anchor": "In 1812 Napoleon marched into Russia with a vast army.",
         "references": {
           "characters": [
             "NAPOLEON"
@@ -295,7 +306,7 @@
           "image_prompt_id": "IMG-001"
         },
         "motion_method": "PAPER_CUT_PARALLAX",
-        "prompt": "Animate only the approved image for 7 seconds; Napoleon in front of map of Europe and marching columns. Gentle plane motion, no face morphing or text.",
+        "prompt": "Animate only the approved image for 7 seconds; Napoleon in front of map of Europe and marching columns. Gentle plane motion, no face morphing or text. Preserve full-bleed paper-cut look with no outer frame. Add only subtle diegetic ambience and Foley; no voice, dialogue, narration or music.",
         "camera": "subtle 2 percent parallax push",
         "duration_seconds": 7,
         "layer_actions": "subtle 2.5D depth movement",
@@ -305,7 +316,17 @@
           "warped anatomy",
           "invented text"
         ],
-        "filename": "ANM-001.mp4"
+        "filename": "ANM-001.mp4",
+        "style_key": "PAPER_CUT_ARCHIVAL_ENGRAVING_V3_EDGE_TO_EDGE",
+        "sound_design": {
+          "type": "diegetic_ambience_and_foley",
+          "prompt": "Restrained natural non-verbal ambience and Foley appropriate to visible scene; no speech.",
+          "voice": false,
+          "dialogue": false,
+          "music": false,
+          "generate_audio": true,
+          "allow_silence_if_not_applicable": true
+        }
       }
     },
     {
@@ -318,7 +339,6 @@
         "scene_id": "SC-001",
         "animation_id": "ANM-002",
         "image_prompt_id": "IMG-002",
-        "narration_anchor": "Months later his army was shattered.",
         "references": {
           "characters": [],
           "environments": [
@@ -331,7 +351,7 @@
           "image_prompt_id": "IMG-002"
         },
         "motion_method": "PAPER_CUT_PARALLAX",
-        "prompt": "Animate only the approved image for 5 seconds; Exhausted retreating soldiers on a broken road. Gentle plane motion, no face morphing or text.",
+        "prompt": "Animate only the approved image for 5 seconds; Exhausted retreating soldiers on a broken road. Gentle plane motion, no face morphing or text. Preserve full-bleed paper-cut look with no outer frame. Add only subtle diegetic ambience and Foley; no voice, dialogue, narration or music.",
         "camera": "subtle 2 percent parallax push",
         "duration_seconds": 5,
         "layer_actions": "subtle 2.5D depth movement",
@@ -341,7 +361,17 @@
           "warped anatomy",
           "invented text"
         ],
-        "filename": "ANM-002.mp4"
+        "filename": "ANM-002.mp4",
+        "style_key": "PAPER_CUT_ARCHIVAL_ENGRAVING_V3_EDGE_TO_EDGE",
+        "sound_design": {
+          "type": "diegetic_ambience_and_foley",
+          "prompt": "Restrained natural non-verbal ambience and Foley appropriate to visible scene; no speech.",
+          "voice": false,
+          "dialogue": false,
+          "music": false,
+          "generate_audio": true,
+          "allow_silence_if_not_applicable": true
+        }
       }
     },
     {
@@ -354,7 +384,6 @@
         "scene_id": "SC-001",
         "animation_id": "ANM-003",
         "image_prompt_id": "IMG-003",
-        "narration_anchor": "But the disaster was not caused by winter alone.",
         "references": {
           "characters": [],
           "environments": [
@@ -367,7 +396,7 @@
           "image_prompt_id": "IMG-003"
         },
         "motion_method": "PAPER_CUT_PARALLAX",
-        "prompt": "Animate only the approved image for 8 seconds; Two-season contrast: summer logistic strain, later snow. Gentle plane motion, no face morphing or text.",
+        "prompt": "Animate only the approved image for 8 seconds; Two-season contrast: summer logistic strain, later snow. Gentle plane motion, no face morphing or text. Preserve full-bleed paper-cut look with no outer frame. Add only subtle diegetic ambience and Foley; no voice, dialogue, narration or music.",
         "camera": "subtle 2 percent parallax push",
         "duration_seconds": 8,
         "layer_actions": "subtle 2.5D depth movement",
@@ -377,7 +406,17 @@
           "warped anatomy",
           "invented text"
         ],
-        "filename": "ANM-003.mp4"
+        "filename": "ANM-003.mp4",
+        "style_key": "PAPER_CUT_ARCHIVAL_ENGRAVING_V3_EDGE_TO_EDGE",
+        "sound_design": {
+          "type": "diegetic_ambience_and_foley",
+          "prompt": "Restrained natural non-verbal ambience and Foley appropriate to visible scene; no speech.",
+          "voice": false,
+          "dialogue": false,
+          "music": false,
+          "generate_audio": true,
+          "allow_silence_if_not_applicable": true
+        }
       }
     }
   ]

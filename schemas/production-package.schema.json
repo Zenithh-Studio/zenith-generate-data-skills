@@ -415,13 +415,13 @@
             "scene_id",
             "animation_id",
             "image_prompt_id",
-            "narration_anchor",
             "references",
             "image_input",
             "motion_method",
             "prompt",
             "camera",
-            "duration_seconds"
+            "duration_seconds",
+            "sound_design"
           ],
           "properties": {
             "references": {
@@ -442,7 +442,47 @@
                 }
               },
               "additionalProperties": true
-            }
+            },
+            "sound_design": {
+              "type": "object",
+              "required": [
+                "type",
+                "prompt",
+                "voice",
+                "dialogue",
+                "music",
+                "generate_audio"
+              ],
+              "properties": {
+                "type": {
+                  "const": "diegetic_ambience_and_foley"
+                },
+                "prompt": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "voice": {
+                  "const": false
+                },
+                "dialogue": {
+                  "const": false
+                },
+                "music": {
+                  "const": false
+                },
+                "generate_audio": {
+                  "type": "boolean"
+                },
+                "allow_silence_if_not_applicable": {
+                  "type": "boolean"
+                }
+              },
+              "additionalProperties": true
+            },
+            "narration_anchor": false,
+            "voice": false,
+            "voice_over": false,
+            "voiceover": false
           },
           "additionalProperties": true
         }

@@ -86,3 +86,12 @@ test('rejects invalid schema and missing metadata',()=>{
   const p=clone();p.schema_version='2.0';p.overview.youtube_title='';
   const e=codes(validatePackage(p));assert.ok(e.includes('VERSION'));assert.ok(e.includes('OVERVIEW'));
 });
+
+test('rejects motion narration or voice fields',()=>{
+  const p=clone();p.motion_prompts[0].prompt_json.narration_anchor='Should not be present';
+  assert.ok(codes(validatePackage(p)).includes('MOTION_VOICE'));
+});
+test('rejects invalid motion sound contract',()=>{
+  const p=clone();p.motion_prompts[0].prompt_json.sound_design.voice=true;
+  assert.ok(codes(validatePackage(p)).includes('MOTION_SOUND'));
+});

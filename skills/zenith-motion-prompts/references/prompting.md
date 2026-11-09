@@ -15,3 +15,9 @@ Image-to-video must receive the actual generated image URI/file; prompt text alo
 ## Input provenance
 
 Keep a source link or upstream record ID for every factual or visual constraint where relevant. Unavailable source verification remains unresolved rather than silently approved.
+
+## Visual and audio constraints
+
+STYLE CONTRACT: use full-bleed edge-to-edge historical paper-cut/archival engraving. Torn paper edges occur ONLY between interior sky/terrain planes, never as an outer border. Characters are etched and integrated into the scene, not white-outline stickers. No surrounding parchment margin, poster, frame or atlas page. For map shots use subtle integrated geographic relief unless an actual map close-up is explicitly requested. Preserve the documented season and 16:9 composition. style_key=PAPER_CUT_ARCHIVAL_ENGRAVING_V3_EDGE_TO_EDGE.
+
+MOTION AUDIO CONTRACT: motion outputs animation plus restrained diegetic environmental ambience and non-verbal Foley/SFX tied to visible actions (or silence). NEVER generate speech, voice-over, narration, dialogue, singing, human vocalizations or background music. Keep script narration in 03 Script and Shot Master only; do not put narration_anchor into motion prompt_json. Use sound_design.type=diegetic_ambience_and_foley, sound_design.prompt, sound_design.voice=false, sound_design.dialogue=false, sound_design.music=false, sound_design.generate_audio=true. Do not add an SFX cue spreadsheet column. The provider adapter must map optional sound generation or reject unsupported audio explicitly.

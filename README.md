@@ -33,3 +33,40 @@ Export produces seven tab-specific UTF-8 CSV files, `manifest.json` and `import-
 - **Quality gates:** validation fails on broken IDs, missing assets, duration mismatches, missing narration coverage and malformed prompt structures.
 
 See [workflow docs](docs/workflow.md), [schema notes](docs/data-contract.md), and [skill installation](docs/installation.md).
+
+## Complete per-skill package structure (v1.1)
+
+Each of the seven independently inspectable skill directories now follows the reference repository's modular packaging convention:
+
+```text
+skills/zenith-<stage>/
+├── SKILL.md                     # agent-facing instructions + stage commands
+├── README.md                    # stage guide
+├── README.en.md                 # English guide
+├── references/
+│   ├── schema.md                # input/output contract
+│   ├── <stage>-pass.md          # concrete authoring procedure
+│   ├── prompting.md             # stage-specific prompting
+│   ├── quality-gates.md         # editorial and deterministic acceptance
+│   ├── report-style.md          # review handoff format
+│   └── test-fixtures/upstream/README.md
+├── scripts/
+│   ├── zenith-<stage>.mjs       # check + render
+│   └── selftest.mjs             # positive/negative tests
+├── examples/
+│   ├── sample.json              # runnable full-package fixture
+│   └── stage.json               # standalone stage output snapshot
+└── assets/
+    ├── README.md
+    └── input-template.json
+```
+
+Example commands for the script sub-skill:
+
+```bash
+node skills/zenith-script/scripts/zenith-script.mjs check skills/zenith-script/examples/sample.json
+node skills/zenith-script/scripts/zenith-script.mjs render skills/zenith-script/examples/sample.json > script-review.md
+node skills/zenith-script/scripts/selftest.mjs
+```
+
+The stage CLI deliberately validates the **complete project context** to catch cross-tab drift; a standalone `stage.json` is a stage output reference, not a self-sufficient full production package. The reference repo has much richer cinematic generation and reporting capabilities; this repository currently targets reliable **data generation**, not identical feature parity or actual media generation.

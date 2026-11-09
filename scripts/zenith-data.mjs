@@ -29,7 +29,7 @@ export function validatePackage(pkg) {
   if (pkg.schema_version !== '1.0') err('VERSION','schema_version must be 1.0');
   const keys=['overview','research','script','visual_bible','shots','image_prompts','motion_prompts'];
   for(const key of keys) if(key === 'overview' ? !isObject(pkg[key]) : !Array.isArray(pkg[key])) err('SHAPE',key+' is missing or wrong type');
-  if(errors.length) return {ok:false,errors,warnings};
+  if(errors.some(issue => issue.code === 'SHAPE')) return {ok:false,errors,warnings};
   if(!nonempty(pkg.overview.youtube_title) || !nonempty(pkg.overview.youtube_description)) err('OVERVIEW','YouTube title and description required');
   if(!nonempty(pkg.overview.central_question) || !nonempty(pkg.overview.historical_thesis)) err('OVERVIEW','Central question and thesis required');
   if(!nonempty(pkg.overview.project_id)) err('OVERVIEW','project_id required');

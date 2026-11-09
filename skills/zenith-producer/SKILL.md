@@ -38,7 +38,7 @@ Distinguish archival evidence from AI reconstruction. Do not forge citations, hi
 
 ## Local package layout and execution (v1.1)
 
-This skill is independently installable and follows the reference repository's **SKILL.md + references/ + scripts/ + examples/ + assets/ + bilingual README** package convention.
+This skill is independently installable. Its English-only package includes **SKILL.md**, **README.md**, **references/**, **scripts/**, **examples/** and **assets/**.
 
 - Read `references/schema.md` for the exact input/output contract before generating any JSON.
 - Read `references/producer-pass.md` for the ordered generation pass and acceptance checklist.

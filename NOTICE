@@ -1,0 +1,16 @@
+Zenith Generate Data Skills
+Copyright (c) 2026 Zenithh Studio
+
+This repository provides agent-installable skill instructions, JSON data
+contracts, validators, examples, and export utilities for the Zenith AI Visual
+Workflow Studio production pipeline.
+
+The repository source code and documentation are distributed under the MIT
+License. See LICENSE for the full license terms.
+
+Third-party content, historical documents, archival photographs, model outputs,
+and generated media are not included in the license grant unless explicitly
+stated. Users are responsible for obtaining any rights necessary for their use.
+
+No third-party software components are bundled as runtime dependencies by the
+dependency-free Node.js validation and export utilities.

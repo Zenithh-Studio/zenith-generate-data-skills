@@ -4,7 +4,6 @@ Agent-installable skills that turn a video idea into a **validated, seven-tab pr
 
 The canonical pipeline is **research → script → shot master → visual bible → image prompts → motion prompts**. The imported application's execution order is **visual bible assets → per-shot images → image-to-video motion**, orchestrated by Shot Master.
 
-This repository is an **original implementation** informed by the agent-agnostic `SKILL.md` packaging pattern used by [shuohao-skills](https://github.com/eternityspring/shuohao-skills). It does not copy that project's scripts or example assets.
 
 ## Quick start
 
@@ -36,13 +35,12 @@ See [workflow docs](docs/workflow.md), [schema notes](docs/data-contract.md), an
 
 ## Complete per-skill package structure (v1.1)
 
-Each of the seven independently inspectable skill directories now follows the reference repository's modular packaging convention:
+Each of the seven independently installable skills uses the same English-only package structure:
 
 ```text
 skills/zenith-<stage>/
 ├── SKILL.md                     # agent-facing instructions + stage commands
 ├── README.md                    # stage guide
-├── README.en.md                 # English guide
 ├── references/
 │   ├── schema.md                # input/output contract
 │   ├── <stage>-pass.md          # concrete authoring procedure
@@ -69,4 +67,10 @@ node skills/zenith-script/scripts/zenith-script.mjs render skills/zenith-script/
 node skills/zenith-script/scripts/selftest.mjs
 ```
 
-The stage CLI deliberately validates the **complete project context** to catch cross-tab drift; a standalone `stage.json` is a stage output reference, not a self-sufficient full production package. The reference repo has much richer cinematic generation and reporting capabilities; this repository currently targets reliable **data generation**, not identical feature parity or actual media generation.
+The stage CLI deliberately validates the **complete project context** to catch cross-tab drift; a standalone `stage.json` is a stage output reference, not a self-sufficient full production package. This repository targets reliable **data generation**, not actual media generation.
+
+## License and notices
+
+Copyright (c) 2026 Zenithh Studio. Released under the [MIT License](LICENSE). See [NOTICE](NOTICE) for project notices and third-party content boundaries.
+
+All documentation and agent instructions are maintained in English; each skill has a single `README.md`.

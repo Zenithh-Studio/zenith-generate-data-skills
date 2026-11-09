@@ -1,0 +1,16 @@
+{
+  "skill": "zenith-script",
+  "stage_field": "script",
+  "inputs": [
+    "research[]",
+    "central question",
+    "target duration"
+  ],
+  "outputs": [
+    "script[]",
+    "scene timings",
+    "locked narration"
+  ],
+  "upstream": "verified research ledger and positioning",
+  "downstream": "immutable narration to Shot Master"
+}
